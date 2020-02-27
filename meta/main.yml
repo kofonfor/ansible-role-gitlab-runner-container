@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Alex Chistyakov
+  description: Dockerized Gitlab Runner
+  company: Kofonfor
+  license:
+    - MIT
+  min_ansible_version: 2.6
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+        - xenial
+

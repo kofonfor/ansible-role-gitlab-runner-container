@@ -1,0 +1,1 @@
+ext_gitlab_runner_config_volume: /var/lib/docker-extvols/gitlab-runner/config

@@ -1,0 +1,12 @@
+- name: create ext volume for config files
+  file: state=directory path={{ ext_gitlab_runner_config_volume }}
+
+- name: start a Gitlab Runner container
+  docker_container:
+    name: gitlab-runner
+    image: gitlab/gitlab-runner
+    state: started
+    restart_policy: always
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "{{ ext_gitlab_runner_config_volume }}:/etc/gitlab-runner"
